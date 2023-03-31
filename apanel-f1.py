@@ -58,7 +58,7 @@ try:
         print (gr+'['+yl+'•'+gr+']'+ylo+' Robots.txt found. Check for any interesting entry'+ylo'\n')
         print (r.text)
 except: #if this request fails, we are getting robots.txt
-    print (+gr+'['+yl+'•'+gr+']'+rd+' Robots.txt not found'+rd'\n)
+    print (+gr+'['+yl+'•'+gr+']'+rd+' Robots.txt not found'+rd'\n')
 print (gr+'――――――――――――――――――――――――――――――――――――――――――――――'+gr'\n')
 
 def scan(links):
