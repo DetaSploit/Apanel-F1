@@ -37,7 +37,7 @@ print(gr+"""
 
 ["""+yl+"""•"""+gr+"""] """+yl+"""Apanel-F1 : Any Website Admin Panel Finder"""+gr+"""!
 ["""+yl+"""•"""+gr+"""] """+yl+"""Creator : MD Asif Hasan"""+gr+"""         [DetaSploit]
-――――――――――――――――――――――――――――――――――――――――――――――\n"""+gr\n)
+――――――――――――――――――――――――――――――――――――――――――――――\n""")
 
 try:
     target = target.replace('https://', '') #Removes https://
