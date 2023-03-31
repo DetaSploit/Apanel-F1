@@ -33,7 +33,7 @@ print(gr+"""
            | |                                        
            |_|                                        
                                             
-――――――― """+yl+"""All praise is for Allah"""+gr+""" ―――――――
+―――――――――― """+yl+"""All praise is for Allah"""+gr+""" ――――――――――
 
 ["""+yl+"""•"""+gr+"""] """+yl+"""Apanel-F1 : Any Website Admin Panel Finder"""+gr+"""!
 ["""+yl+"""•"""+gr+"""] """+yl+"""Creator : MD Asif Hasan"""+gr+"""         [DetaSploit]
@@ -42,7 +42,7 @@ print(gr+"""
 try:
     target = target.replace('https://', '') #Removes https://
 except:
-    print ('\033[1;31m[-]\033[1;m -u argument is not supplied. Enter python apanel-f1.py -h for help')
+    print (gr+'['+yl+'•'+gr+'] -u Argument is not supplied. Enter python apanel-f1.py -h for help\n')
     quit()
 
 target = target.replace('http://', '') #and http:// from the url
@@ -53,13 +53,13 @@ if args.prefix != None:
 try:
     r = requests.get(target + '/robots.txt') #Requests to example.com/robots.txt
     if '<html>' in r.text: #if there's an html error page then its not robots.txt
-        print ('  \033[1;31m[-]\033[1;m Robots.txt not found\n')
+        print (gr+'['+yl+'•'+gr+'] Robots.txt not found\n')
     else: #else we got robots.txt
-        print ('  \033[1;32m[+]\033[0m Robots.txt found. Check for any interesting entry\n')
+        print (gr+'['+yl+'•'+gr+'] Robots.txt found. Check for any interesting entry\n')
         print (r.text)
 except: #if this request fails, we are getting robots.txt
-    print ('  \033[1;31m[-]\033[1;m Robots.txt not found\n')
-print ('\033[1;31m--------------------------------------------------------------------------\033[1;m\n')
+    print (+gr+'['+yl+'•'+gr+'] Robots.txt not found\n')
+print (gr+'――――――――――――――――――――――――――――――――――――――――――――――\n')
 
 def scan(links):
     for link in links: #fetches one link from the links list
@@ -67,13 +67,13 @@ def scan(links):
         r = requests.get(link) #Requests to the combined url
         http = r.status_code #Fetches the http response code
         if http == 200: #if its 200 the url points to valid resource i.e. admin panel
-            print ('  \033[1;32m[+]\033[0m Admin panel found: %s'% link)
+            print (gr+'['+yl+'•'+gr+'] Admin panel found: %s'% link)
         elif http == 404: #404 means not found
-            print ('  \033[1;31m[-]\033[1;m %s'% link)
+            print (gr+'['+yl+'•'+gr+'] %s'% link)
         elif http == 302: #302 means redirection
-            print ('  \033[1;32m[+]\033[0m Potential EAR vulnerability found : ' + link)
+            print (gr+'['+yl+'•'+gr+'] Potential EAR vulnerability found : ' + link)
         else:
-            print ('  \033[1;31m[-]\033[1;m %s'% link)
+            print (gr+'['+yl+'•'+gr+'] %s'% link)
 paths = [] #list of paths
 def get_paths(type):
     try:
@@ -99,7 +99,7 @@ def get_paths(type):
                 except:
                     paths.append(path)
     except IOError:
-        print ('\033[1;31m[-]\033[1;m Wordlist not found!')
+        print (gr+'['+yl+'•'+gr+'] Wordlist not found!\n')
         quit()
 
 if args.fast == True: #if the user has supplied --fast argument
