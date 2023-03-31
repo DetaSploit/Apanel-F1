@@ -42,7 +42,7 @@ print(gr+"""
 try:
     target = target.replace('https://', '') #Removes https://
 except:
-    print (gr+'['+yl+'•'+gr+']'+rd+' -u Argument is not supplied. Enter python apanel-f1.py -h for help'+rd'\n')
+    print (gr+'['+yl+'•'+gr+']'+rd+' -u Argument is not supplied. Enter python apanel-f1.py -h for help\n')
     quit()
 
 target = target.replace('http://', '') #and http:// from the url
@@ -53,13 +53,13 @@ if args.prefix != None:
 try:
     r = requests.get(target + '/robots.txt') #Requests to example.com/robots.txt
     if '<html>' in r.text: #if there's an html error page then its not robots.txt
-        print (gr+'['+yl+'•'+gr+']'+rd+' Robots.txt not found'+rd'\n')
+        print (gr+'['+yl+'•'+gr+']'+rd+' Robots.txt not found\n')
     else: #else we got robots.txt
-        print (gr+'['+yl+'•'+gr+']'+ylo+' Robots.txt found. Check for any interesting entry'+ylo'\n')
+        print (gr+'['+yl+'•'+gr+']'+ylo+' Robots.txt found. Check for any interesting entry\n')
         print (r.text)
 except: #if this request fails, we are getting robots.txt
-    print (+gr+'['+yl+'•'+gr+']'+rd+' Robots.txt not found'+rd'\n')
-print (gr+'――――――――――――――――――――――――――――――――――――――――――――――'+gr'\n')
+    print (+gr+'['+yl+'•'+gr+']'+rd+' Robots.txt not found\n')
+print (gr+'――――――――――――――――――――――――――――――――――――――――――――――\n')
 
 def scan(links):
     for link in links: #fetches one link from the links list
