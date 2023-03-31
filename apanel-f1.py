@@ -66,14 +66,14 @@ def scan(links):
         link = target + link # Does this--> example.com/admin/
         r = requests.get(link) #Requests to the combined url
         http = r.status_code #Fetches the http response code
-        if http == 200: #if its 200 the url points to valid resource i.e. admin panel             
-        print ('[•] Admin panel found: %s'% link)
+        if http == 200: #if its 200 the url points to valid resource i.e. admin panel
+            print ('  \033[1;32m[•]\033[0m Admin panel found: %s'% link)
         elif http == 404: #404 means not found
-            print ('[•] %s'% link)
+            print ('  \033[1;31m[•]\033[1;m %s'% link)
         elif http == 302: #302 means redirection
-            print ('[•] Potential EAR vulnerability found : ' + link)
+            print ('  \033[1;32m[•]\033[0m Potential EAR vulnerability found : ' + link)
         else:
-            print ('[•] %s'% link)
+            print ('  \033[1;31m[•]\033[1;m %s'% link)
 paths = [] #list of paths
 def get_paths(type):
     try:
@@ -99,7 +99,7 @@ def get_paths(type):
                 except:
                     paths.append(path)
     except IOError:
-        print (+gr+'['+yl+'•'+gr+']'+rd+' Wordlist not found!\n')
+        print ('\033[1;31m[•]\033[1;m Wordlist not found!')
         quit()
 
 if args.fast == True: #if the user has supplied --fast argument
