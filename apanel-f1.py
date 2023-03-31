@@ -42,7 +42,7 @@ print(gr+"""
 try:
     target = target.replace('https://', '') #Removes https://
 except:
-    print (gr+'['+yl+'•'+gr+']'+rd+' -u Argument is not supplied. Enter python apanel-f1.py -h for help'+rd'\n)
+    print (gr+'['+yl+'•'+gr+']'+rd+' -u Argument is not supplied. Enter python apanel-f1.py -h for help\n)
     quit()
 
 target = target.replace('http://', '') #and http:// from the url
