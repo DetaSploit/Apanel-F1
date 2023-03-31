@@ -55,7 +55,7 @@ try:
     if '<html>' in r.text: #if there's an html error page then its not robots.txt
         print (gr+'['+yl+'•'+gr+']'+rd+' Robots.txt not found\n')
     else: #else we got robots.txt
-        print (gr+'['+yl+'•'+gr+']'+ylo+' Robots.txt found. Check for any interesting entry\n')
+        print (gr+'['+yl+'•'+gr+']'+yl+' Robots.txt found. Check for any interesting entry\n')
         print (r.text)
 except: #if this request fails, we are getting robots.txt
     print (+gr+'['+yl+'•'+gr+']'+rd+' Robots.txt not found\n')
@@ -67,7 +67,7 @@ def scan(links):
         r = requests.get(link) #Requests to the combined url
         http = r.status_code #Fetches the http response code
         if http == 200: #if its 200 the url points to valid resource i.e. admin panel
-            print (gr+'['+yl+'•'+gr+']'+ylo+' Admin panel found: %s'% link)
+            print (gr+'['+yl+'•'+gr+']'+yl+' Admin panel found: %s'% link)
         elif http == 404: #404 means not found
             print (+gr+'['+yl+'•'+gr+']'+rd+' %s'% link)
         elif http == 302: #302 means redirection
