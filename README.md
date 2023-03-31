@@ -1,5 +1,6 @@
-# Apanel-F1
-find admin login pages and EAR vulnerabilites.
+<h1><p align="center">Brute-F1</p></h1>
+
+<p align="center">Any Website Admin Panel Finder<br/>―――― MD Asif Hasan ――――</p>
 
 #### Features
 - Multi-threading on demand
@@ -10,6 +11,10 @@ find admin login pages and EAR vulnerabilites.
 - Support for custom patns
 
 ### Usages
+- First clone this repository
+```
+git clone https://github.com/DetaSploit/Apanel-F1
+```
 - Check all paths with php extension
 ```
 python apanel-f1.py -u example.com --type php
