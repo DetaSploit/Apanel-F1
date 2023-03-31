@@ -66,14 +66,14 @@ def scan(links):
         link = target + link # Does this--> example.com/admin/
         r = requests.get(link) #Requests to the combined url
         http = r.status_code #Fetches the http response code
-        if http == 200: #if its 200 the url points to valid resource i.e. admin panel
-            print (gr+'['+yl+'•'+gr+']'+yl+' Admin panel found: %s'% link)
+        if http == 200: #if its 200 the url points to valid resource i.e. admin panel             
+        print ('[•] Admin panel found: %s'% link)
         elif http == 404: #404 means not found
-            print (+gr+'['+yl+'•'+gr+']'+rd+' %s'% link)
+            print ('[•] %s'% link)
         elif http == 302: #302 means redirection
-            print (+gr+'['+yl+'•'+gr+'] Potential EAR vulnerability found : ' + link)
+            print ('[•] Potential EAR vulnerability found : ' + link)
         else:
-            print (+gr+'['+yl+'•'+gr+']'+rd+' %s'% link)
+            print ('[•] %s'% link)
 paths = [] #list of paths
 def get_paths(type):
     try:
