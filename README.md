@@ -10,11 +10,14 @@
 - Checks for robots.txt
 - Support for custom patns
 
-### Usages
-- First clone this repository
+### Installation
 ```
 git clone https://github.com/DetaSploit/Apanel-F1
 ```
+```
+cd Apanel-F1
+```
+### Usages
 - Check all paths with php extension
 ```
 python apanel-f1.py -u example.com --type php
